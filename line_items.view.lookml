@@ -112,9 +112,8 @@
     sql: ${product_cost}
     
   - measure: total_qty
-    type: sum
     decimals: 0
-    sql: ${quantity}
+    sql: SUM(COALESCE(quantity, 0))
     
   # ----- Detail ------
   sets:
